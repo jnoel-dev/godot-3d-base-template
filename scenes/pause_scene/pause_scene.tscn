@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnyo1q71tfiij"]
+
+[ext_resource type="Script" path="res://scenes/pause_scene/pause_scene.gd" id="1_h6ypo"]
+
+[node name="PauseScene" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_h6ypo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 0.196078)

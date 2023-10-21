@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt8onk0twm1h2"]
+
+[ext_resource type="Script" path="res://scenes/main_scene/scripts/main.gd" id="1_wnxtq"]
+[ext_resource type="Script" path="res://scenes/scripts/scene_controller.gd" id="2_pj6sb"]
+[ext_resource type="PackedScene" uid="uid://c7j4qjfmb8y7o" path="res://scenes/player_scene/player.tscn" id="3_ymu03"]
+[ext_resource type="PackedScene" uid="uid://bnyo1q71tfiij" path="res://scenes/pause_scene/pause_scene.tscn" id="4_xjohw"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_wnxtq")
+
+[node name="SceneController" type="Node" parent="."]
+script = ExtResource("2_pj6sb")
+
+[node name="LoadedScene" type="Node" parent="SceneController"]
+
+[node name="PersistantScenes" type="Node" parent="SceneController"]
+
+[node name="Player" parent="SceneController/PersistantScenes" instance=ExtResource("3_ymu03")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="PauseScene" parent="SceneController/PersistantScenes" instance=ExtResource("4_xjohw")]
